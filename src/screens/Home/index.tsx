@@ -35,12 +35,10 @@ export function Home() {
     Alert.alert("Remover participante", `Deseja remover ${name}?`, [
       {
         text: "Sim",
-        onPress: () => {
-          Alert.alert("Participante removido");
+        onPress: () =>
           setParticipants((prevState) =>
             prevState.filter((participant) => participant !== name)
-          );
-        },
+          ),
       },
       {
         text: "Não",
